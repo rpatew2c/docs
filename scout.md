@@ -404,6 +404,9 @@ If you would like to modify the query that is used to retrieve all of your model
         return $query->with('author');
     }
 
+> **Warning**  
+> The `makeAllSearchableUsing` method is not applicable when using a queue to import models. Relationships are not restored when collections are unserialized in a job, even if they are present when the models are serialized.
+
 <a name="adding-records"></a>
 ### Adding Records
 
